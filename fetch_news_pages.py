@@ -6,8 +6,8 @@ import sys
 from lxml import html
 
 
-EPOCH_START = datetime.date(2015, 1, 1)
-EPOCH_END = datetime.date(2016, 1, 1)
+EPOCH_START = datetime.date(2017, 1, 1)
+EPOCH_END = datetime.date(2018, 1, 1)
 
 
 def main():
