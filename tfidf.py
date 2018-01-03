@@ -16,7 +16,7 @@ def main():
     tfidf = TfidfVectorizer(
         input='content',
         lowercase=False,
-        min_df=0.1,
+        min_df=0.005,
         use_idf=True,
         smooth_idf=True,
         sublinear_tf=True,
@@ -25,6 +25,8 @@ def main():
 
     x = tfidf.fit_transform(contents)
     x = x.todense()
+
+    print('Vocabulary length: {:d}'.format(len(tfidf.vocabulary_)))
 
     le = LabelEncoder()
     y = le.fit_transform(categories)
